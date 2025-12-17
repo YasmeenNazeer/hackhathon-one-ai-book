@@ -11,12 +11,10 @@ const config: Config = {
   tagline: 'Bridging the gap between the digital brain and the physical body',
   favicon: 'img/favicon.ico',
 
-  // ✅ Works on BOTH Vercel & GitHub Pages
-  url: isVercel
-    ? 'https://physical-ai-and-humanoid-robotics.vercel.app'
-    : 'https://github.com/YasmeenNazeer/physical-ai-and-humanoid-robotics-hackhathon',
-
-  baseUrl: isVercel ? '/' : '/physical-ai-and-humanoid-robotics/',
+  // Set the production url of your site here
+  url: 'https://github.com/',
+  // Set the /<baseUrl>/ pathname under which your site is served
+  baseUrl: '/',
 
   organizationName: 'YasmeenNazeer',
   projectName: 'physical-ai-and-humanoid-robotics',
@@ -43,7 +41,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/YasmeenNazeer/physical-ai-and-humanoid-robotics-hackhathon',
+          editUrl: 'https://github.com/YasmeenNazeer',
         },
         blog: false,
         theme: {
@@ -99,7 +97,7 @@ const config: Config = {
           ],
         },
         {
-          href: 'https://github.com/YasmeenNazeer/physical-ai-and-humanoid-robotics-hackhathon',
+          href: 'https://github.com/YasmeenNazeer',
           label: 'GitHub',
           position: 'right',
         },
@@ -124,7 +122,7 @@ const config: Config = {
           items: [
             {
               label: 'Yasmeen Nazeer',
-              href: 'https://github.com/YasmeenNazeer/physical-ai-and-humanoid-robotics-hackhathon',
+              href: 'https://github.com/YasmeenNazeer',
             },
             {
               label: 'LinkedIn',
@@ -137,7 +135,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub Repository',
-              href: 'https://github.com/YasmeenNazeer/physical-ai-and-humanoid-robotics-hackhathon',
+              href: 'https://github.com/YasmeenNazeer',
             },
           ],
         },
