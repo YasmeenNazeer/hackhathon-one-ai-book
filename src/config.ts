@@ -10,12 +10,12 @@ export function useApiConfig() {
   };
   
   return {
-    apiUrl: customFields?.apiUrl || 'web-production-2aca8.up.railway.app',
+    apiUrl: customFields?.apiUrl || 'https://web-production-2aca8.up.railway.app',
     apiKey: customFields?.apiKey || '',
   };
 }
 
 // For use outside React components (fallback values)
-export const API_URL = 'web-production-2aca8.up.railway.app';
+export const API_URL = 'https://web-production-2aca8.up.railway.app';
 
 export const API_KEY = '';

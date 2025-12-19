@@ -30,7 +30,7 @@ const config: Config = {
   // 🔐 Safe env usage (no secrets in bundle)
   customFields: {
 
-    apiUrl: process.env.REACT_APP_API_URL || 'web-production-2aca8.up.railway.app',
+    apiUrl: process.env.REACT_APP_API_URL || 'https://web-production-2aca8.up.railway.app',
 
     apiKey: process.env.REACT_APP_API_KEY || '',
   },
