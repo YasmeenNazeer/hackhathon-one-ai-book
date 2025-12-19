@@ -1,27 +1,27 @@
 /* src/css/custom.css */
 /**
- * Premium Book / Documentation Theme
- * Aqua Teal + Emerald
- * Modern, readable, glassmorphism inspired
+ * Premium Book Theme
+ * Black + Burnt Orange
+ * Strong, bold, professional
  */
 
 /* =======================
    ROOT (LIGHT MODE)
    ======================= */
 :root {
-  /* Primary Colors – Aqua / Teal */
-  --ifm-color-primary: #0ea5a4;
-  --ifm-color-primary-dark: #0d9488;
-  --ifm-color-primary-darker: #0f766e;
-  --ifm-color-primary-darkest: #115e59;
-  --ifm-color-primary-light: #2dd4bf;
-  --ifm-color-primary-lighter: #99f6e4;
-  --ifm-color-primary-lightest: #ecfeff;
+  /* Primary – Burnt Orange */
+  --ifm-color-primary: #f97316;
+  --ifm-color-primary-dark: #ea580c;
+  --ifm-color-primary-darker: #c2410c;
+  --ifm-color-primary-darkest: #9a3412;
+  --ifm-color-primary-light: #fb923c;
+  --ifm-color-primary-lighter: #fed7aa;
+  --ifm-color-primary-lightest: #fff7ed;
 
   /* Backgrounds */
-  --ifm-background-color: #f8fafc;
+  --ifm-background-color: #fafafa;
   --ifm-background-surface-color: #ffffff;
-  --ifm-navbar-background-color: rgba(255, 255, 255, 0.8);
+  --ifm-navbar-background-color: rgba(250, 250, 250, 0.9);
 
   /* Layout */
   --ifm-global-radius: 12px;
@@ -29,30 +29,29 @@
   --ifm-navbar-height: 64px;
 
   /* Shadows */
-  --ifm-global-shadow-lw: 0 4px 10px rgba(0, 0, 0, 0.05);
-  --ifm-global-shadow-md: 0 12px 24px rgba(0, 0, 0, 0.08);
+  --ifm-global-shadow-lw: 0 6px 14px rgba(249, 115, 22, 0.14);
+  --ifm-global-shadow-md: 0 18px 32px rgba(249, 115, 22, 0.2);
 
   /* Typography */
-  --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --ifm-font-family-base: 'Inter', system-ui, sans-serif;
   --ifm-heading-font-weight: 700;
 }
 
 /* =======================
-   DARK MODE
+   DARK MODE – BLACK ORANGE
    ======================= */
 [data-theme='dark'] {
-  --ifm-color-primary: #5eead4;
-  --ifm-background-color: #071a1a;
-  --ifm-background-surface-color: #0b2f2f;
-  --ifm-navbar-background-color: rgba(7, 26, 26, 0.85);
+  --ifm-color-primary: #fdba74;
+  --ifm-background-color: #0c0a09;
+  --ifm-background-surface-color: #1c1917;
+  --ifm-navbar-background-color: rgba(12, 10, 9, 0.9);
 }
 
 /* =======================
-   NAVBAR – Glass Effect
+   NAVBAR
    ======================= */
 .navbar {
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--ifm-color-emphasis-200);
 }
 
@@ -74,62 +73,51 @@
 }
 
 [data-theme='dark'] .menu__link--active {
-  background-color: rgba(94, 234, 212, 0.15);
+  background-color: rgba(253, 186, 116, 0.18);
   color: var(--ifm-color-primary);
 }
 
 /* =======================
-   CARDS – Modern Style
+   CARDS
    ======================= */
 .card {
-  border: 1px solid var(--ifm-color-emphasis-200);
   border-radius: 12px;
+  border: 1px solid var(--ifm-color-emphasis-200);
   box-shadow: var(--ifm-global-shadow-lw);
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--ifm-global-shadow-md);
   border-color: var(--ifm-color-primary);
+  box-shadow: var(--ifm-global-shadow-md);
 }
 
 /* =======================
-   BUTTONS – Pill Style
+   BUTTONS
    ======================= */
 .button {
-  border-radius: 50px;
+  border-radius: 999px;
   font-weight: 600;
   padding: 0.6rem 1.5rem;
-  transition: all 0.25s ease;
 }
 
 .button--primary {
-  background: linear-gradient(
-    135deg,
-    var(--ifm-color-primary) 0%,
-    var(--ifm-color-primary-dark) 100%
-  );
+  background: linear-gradient(135deg, #f97316, #c2410c);
   border: none;
-  box-shadow: 0 4px 14px rgba(14, 165, 164, 0.35);
+  box-shadow: 0 6px 18px rgba(249, 115, 22, 0.45);
 }
 
 .button--primary:hover {
   transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(14, 165, 164, 0.45);
+  box-shadow: 0 10px 26px rgba(249, 115, 22, 0.6);
 }
 
 /* =======================
-   MARKDOWN / CONTENT
+   CONTENT
    ======================= */
-.markdown h1,
-.markdown h2,
-.markdown h3 {
-  letter-spacing: -0.02em;
-}
-
 .markdown p {
-  line-height: 1.8;
+  line-height: 1.85;
 }
 
 /* =======================
@@ -138,11 +126,10 @@
 .markdown pre {
   border-radius: 12px;
   border: 1px solid var(--ifm-color-emphasis-200);
-  box-shadow: var(--ifm-global-shadow-lw);
 }
 
 [data-theme='dark'] .markdown pre {
-  background-color: #042f2e;
+  background-color: #070504;
 }
 
 /* =======================
@@ -162,34 +149,28 @@ table {
   background-color: var(--ifm-background-surface-color);
 }
 
-
-
-/* FORCE PAGE BACKGROUND CHANGE */
+/* =======================
+   PAGE BACKGROUND
+   ======================= */
 .main-wrapper,
 .docs-wrapper,
 .docs-doc-page {
-  background: linear-gradient(
-    180deg,
-    #f0fdfa 0%,
-    #ecfeff 100%
-  );
+  background: linear-gradient(180deg, #ffffff 0%, #fff7ed 100%);
 }
 
-/* Dark mode background fix */
 [data-theme='dark'] .main-wrapper,
 [data-theme='dark'] .docs-wrapper,
 [data-theme='dark'] .docs-doc-page {
-  background: linear-gradient(
-    180deg,
-    #2d2e2e 0%,
-    #2e3131 100%
-  );
+  background: linear-gradient(180deg, #0c0a09 0%, #070504 100%);
 }
 
-
+/* =======================
+   CONTENT BOX
+   ======================= */
 .theme-doc-markdown {
   background-color: var(--ifm-background-surface-color);
   padding: 2rem;
   border-radius: 16px;
   box-shadow: var(--ifm-global-shadow-md);
 }
+
