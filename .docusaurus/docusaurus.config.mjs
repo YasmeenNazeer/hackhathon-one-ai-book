@@ -7,8 +7,8 @@ export default {
   "title": "Physical AI & Humanoid Robotics",
   "tagline": "Bridging the gap between the digital brain and the physical body",
   "favicon": "img/favicon.ico",
-  "url": "https://YasmeenNazeer.github.io",
-  "baseUrl": "/physical-ai-and-humanoid-robotics/",
+  "url": "https://github.com",
+  "baseUrl": "/",
   "organizationName": "YasmeenNazeer",
   "projectName": "physical-ai-and-humanoid-robotics",
   "onBrokenLinks": "warn",
@@ -21,7 +21,7 @@ export default {
     "localeConfigs": {}
   },
   "customFields": {
-    "apiUrl": "https://ai-rative-book-backend-production.up.railway.app",
+    "apiUrl": "web-production-2aca8.up.railway.app",
     "apiKey": ""
   },
   "presets": [
@@ -129,7 +129,7 @@ export default {
           ]
         }
       ],
-      "copyright": "© 2025 Physical AI & Humanoid Robotics. Built with Docusaurus."
+      "copyright": "© 2025 Physical AI & Humanoid Robotics."
     },
     "prism": {
       "theme": {

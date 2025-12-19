@@ -5,7 +5,7 @@
   "source": "@site/docs/hardware-requirements.md",
   "sourceDirName": ".",
   "slug": "/hardware-requirements",
-  "permalink": "/physical-ai-and-humanoid-robotics/docs/hardware-requirements",
+  "permalink": "/docs/hardware-requirements",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/YasmeenNazeer/docs/hardware-requirements.md",
@@ -28,6 +28,6 @@
   "sidebar": "tutorialSidebar",
   "next": {
     "title": "Physical AI & Humanoid Robotics",
-    "permalink": "/physical-ai-and-humanoid-robotics/docs/"
+    "permalink": "/docs/"
   }
 }
