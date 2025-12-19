@@ -1,55 +1,89 @@
 /* src/css/custom.css */
 /**
- * Modern Tech Theme
- * Premium look with gradients, glassmorphism, and soft shadows
+ * Premium Book / Documentation Theme
+ * Aqua Teal + Emerald
+ * Modern, readable, glassmorphism inspired
  */
 
+/* =======================
+   ROOT (LIGHT MODE)
+   ======================= */
 :root {
-  /* Modern Indigo/Violet Primary */
-  --ifm-color-primary: #6366f1;
-  --ifm-color-primary-dark: #4f46e5;
-  --ifm-color-primary-darker: #4338ca;
-  --ifm-color-primary-darkest: #3730a3;
-  --ifm-color-primary-light: #818cf8;
-  --ifm-color-primary-lighter: #a5b4fc;
-  --ifm-color-primary-lightest: #c7d2fe;
+  /* Primary Colors – Aqua / Teal */
+  --ifm-color-primary: #0ea5a4;
+  --ifm-color-primary-dark: #0d9488;
+  --ifm-color-primary-darker: #0f766e;
+  --ifm-color-primary-darkest: #115e59;
+  --ifm-color-primary-light: #2dd4bf;
+  --ifm-color-primary-lighter: #99f6e4;
+  --ifm-color-primary-lightest: #ecfeff;
 
   /* Backgrounds */
-  --ifm-background-color: #ffffff;
+  --ifm-background-color: #f8fafc;
   --ifm-background-surface-color: #ffffff;
-  --ifm-navbar-background-color: rgba(255, 255, 255, 0.8); /* Transparent for glass effect */
+  --ifm-navbar-background-color: rgba(255, 255, 255, 0.8);
 
-  /* Spacing & Layout */
-  --ifm-global-radius: 12px; /* Smooth rounded corners */
+  /* Layout */
+  --ifm-global-radius: 12px;
   --ifm-card-border-radius: 12px;
   --ifm-navbar-height: 64px;
-  
-  /* Modern Shadows */
-  --ifm-global-shadow-lw: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-  --ifm-global-shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
-  
-  /* Fonts */
+
+  /* Shadows */
+  --ifm-global-shadow-lw: 0 4px 10px rgba(0, 0, 0, 0.05);
+  --ifm-global-shadow-md: 0 12px 24px rgba(0, 0, 0, 0.08);
+
+  /* Typography */
   --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
   --ifm-heading-font-weight: 700;
 }
 
+/* =======================
+   DARK MODE
+   ======================= */
 [data-theme='dark'] {
-  --ifm-color-primary: #818cf8;
-  --ifm-background-color: #0f172a; /* Slate Dark */
-  --ifm-background-surface-color: #1e293b;
-  --ifm-navbar-background-color: rgba(15, 23, 42, 0.8);
+  --ifm-color-primary: #5eead4;
+  --ifm-background-color: #071a1a;
+  --ifm-background-surface-color: #0b2f2f;
+  --ifm-navbar-background-color: rgba(7, 26, 26, 0.85);
 }
 
-/* NAVBAR - Glass Effect */
+/* =======================
+   NAVBAR – Glass Effect
+   ======================= */
 .navbar {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--ifm-color-emphasis-200);
 }
 
-/* CARDS - Modern Card Style */
+/* =======================
+   SIDEBAR / MENU
+   ======================= */
+.menu {
+  padding: 0.75rem;
+}
+
+.menu__link {
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.menu__link--active {
+  background-color: var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-primary-darkest);
+}
+
+[data-theme='dark'] .menu__link--active {
+  background-color: rgba(94, 234, 212, 0.15);
+  color: var(--ifm-color-primary);
+}
+
+/* =======================
+   CARDS – Modern Style
+   ======================= */
 .card {
   border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 12px;
   box-shadow: var(--ifm-global-shadow-lw);
   transition: all 0.3s ease;
 }
@@ -60,31 +94,102 @@
   border-color: var(--ifm-color-primary);
 }
 
-/* BUTTONS - Modern Pills */
+/* =======================
+   BUTTONS – Pill Style
+   ======================= */
 .button {
-  border-radius: 50px; /* Pill shape */
+  border-radius: 50px;
   font-weight: 600;
   padding: 0.6rem 1.5rem;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
 }
 
 .button--primary {
-  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--ifm-color-primary) 0%,
+    var(--ifm-color-primary-dark) 100%
+  );
   border: none;
-  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 4px 14px rgba(14, 165, 164, 0.35);
 }
 
 .button--primary:hover {
-  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.4);
   transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(14, 165, 164, 0.45);
 }
 
-/* SIDEBAR & DOCS */
-.menu__link {
-  border-radius: 8px;
+/* =======================
+   MARKDOWN / CONTENT
+   ======================= */
+.markdown h1,
+.markdown h2,
+.markdown h3 {
+  letter-spacing: -0.02em;
 }
 
+.markdown p {
+  line-height: 1.8;
+}
+
+/* =======================
+   CODE BLOCKS
+   ======================= */
 .markdown pre {
   border-radius: 12px;
   border: 1px solid var(--ifm-color-emphasis-200);
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+[data-theme='dark'] .markdown pre {
+  background-color: #042f2e;
+}
+
+/* =======================
+   TABLES
+   ======================= */
+table {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+/* =======================
+   FOOTER
+   ======================= */
+.footer {
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  background-color: var(--ifm-background-surface-color);
+}
+
+
+
+/* FORCE PAGE BACKGROUND CHANGE */
+.main-wrapper,
+.docs-wrapper,
+.docs-doc-page {
+  background: linear-gradient(
+    180deg,
+    #f0fdfa 0%,
+    #ecfeff 100%
+  );
+}
+
+/* Dark mode background fix */
+[data-theme='dark'] .main-wrapper,
+[data-theme='dark'] .docs-wrapper,
+[data-theme='dark'] .docs-doc-page {
+  background: linear-gradient(
+    180deg,
+    #2d2e2e 0%,
+    #2e3131 100%
+  );
+}
+
+
+.theme-doc-markdown {
+  background-color: var(--ifm-background-surface-color);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: var(--ifm-global-shadow-md);
 }
